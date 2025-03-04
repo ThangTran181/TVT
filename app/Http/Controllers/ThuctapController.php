@@ -23,4 +23,19 @@ class ThuctapController extends Controller
         $kq = Nhasanxuat::create(['ten' => "Apple", 'logo' => 'logo_apple.png', 'status' => 0]);
         return redirect('/nsx');
     }
+
+    public function edit($id)
+    {
+       $nsx = Nhasanxuat::find($id);
+        $nsx->ten = 'NSX New';
+        $nsx->save();
+        return redirect('/nsx');
+    }
+
+    public function delete($id)
+    {
+       $nsx = Nhasanxuat::find($id);
+        $nsx->delete();
+        return redirect('/nsx');
+    }
 }

@@ -16,5 +16,7 @@ class NhaSanXuat extends Model
     public $timestamps = false;
     protected $atributes = ['logo' => '', 'status' => 0];
 
+    // $nsx = app\Models\NhaSanXuat::find(1);
+    // $nsx->delete();
     use SoftDeletes;
 }
